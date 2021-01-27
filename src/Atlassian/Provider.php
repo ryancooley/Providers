@@ -15,7 +15,15 @@ class Provider extends AbstractProvider
     /**
      * {@inheritdoc}
      */
-    protected $scopes = ['basic'];
+    protected $parameters = [
+        'prompt' => 'consent',
+        'audience' => 'api.atlassian.com',
+    ];
+
+    /**
+     * {@inheritdoc}
+     */
+    protected $scopes = ['read:me'];
 
     /**
      * {@inheritdoc}
